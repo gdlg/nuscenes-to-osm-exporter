@@ -4,13 +4,28 @@ This tool converts the maps of the [NuScenes dataset](https://www.nuscenes.org) 
 
 ## Exporting the maps
 
-The tool is based on the NuScenes devkit and the UTM library. It can be used as follow:
+The tool is based on the NuScenes devkit and the UTM library. Install the requirements using pip:
 ```
 pip install -r requirements.txt
+```
+
+Converting NuScenes maps to the OpenStreetMap format.
+The tool will create a .osm file in the current directory for each map.
+```
 python nuscenes_map_to_osm_exporter.py ~/data/nuscenes
 ```
 
-The tool will create a .osm file in the current directory for each map.
+Converting NuScenes annotations to the OpenStreetMap format.
+The tool will create a .osm file in the current directory for each scene.
+```
+python nuscenes_to_osm_exporter.py ~/data/nuscenes
+```
+
+Converting NuScenes annotations to GPX format.
+The tool will create a .gpx file in the current directory for each scene. The script above is more useful than this one because it exports all the metadata associated with the annotations rather this one only export the tracks themselves.
+```
+python nuscenes_to_gpx_exporter.py ~/data/nuscenes
+```
 
 ## Visualising the data
 
