@@ -1,0 +1,73 @@
+meta
+{
+title: "NuScenes"
+description: "NuScenes map style"
+author: "gdlg"
+version: "1.0"
+}
+
+relation[dtype=drivable_area]
+{
+fill-color: #a6cee3;
+}
+
+area[dtype=drivable_area]
+{
+fill-color: #a6cee3;
+}
+
+area[dtype=road_segment]
+{
+fill-color: #1f78b4;
+}
+
+area[dtype=road_block]
+{
+fill-color: #b2df8a;
+}
+
+area[dtype=lane]
+{
+fill-color: #33a02c;
+}
+
+area[dtype=ped_crossing]
+{
+fill-color: #fb9a99;
+}
+
+area[dtype=walkway]
+{
+fill-color: #e31a1c;
+}
+
+area[dtype=stop_line]
+{
+fill-color: #fdbf6f;
+}
+
+area[dtype=carpark_area]
+{
+fill-color: #ff7f00;
+}
+
+way[dtype=road_divider]
+{
+color: #cab2d6;
+}
+
+way[dtype=lane_divider]
+{
+color: #6a3d9a;
+}
+
+way[dtype=traffic_light]
+{
+color: #7e772e;
+}
+
+node[ntype=traffic_light]
+{
+icon-image:"presets/vehicle/traffic_signals.svg" ;
+set icon_z17;
+}
