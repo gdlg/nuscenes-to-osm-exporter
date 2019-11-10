@@ -33,5 +33,5 @@ The .osm files can be viewed in [JOSM](https://josm.openstreetmap.de).
 
 To render the map properly, you must add the provided `nuscenes.mapcss` to JOSM Paint Styles. To do so, open JOSM, go into the menu `Edit/Preferences`. Under the tab `Map Settings` (third from the top), go into the subtab `Map Paint Styles` then add the `nuscenes.mapcss` custom style by clicking on the `+` icon on the right and selecting the file.
 
-Aerial photography can also be overlaid by using the `Imagery` menu. The NuScenes maps were experimentally aligned with the imagery data and the alignment is not perfect. The coordinates that are used to generate the map are hard-coded at the top of the script `nuscenes_map_to_osm_exporter.py`.
+Aerial photography can also be overlaid by using the `Imagery` menu. The NuScenes maps were experimentally aligned with the imagery data and the alignment is not perfect. The coordinates that are used to generate the map are hard-coded in the file `utils/__init__.py`.
 
