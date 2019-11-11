@@ -15,7 +15,7 @@ def export_scene(nusc, scene_no):
     reset_map_location(log['location'])
     
     # Open the output file.
-    output_file = open("scene_"+str(scene_no)+".gpx", "w")
+    output_file = open("scene_%d_%s.gpx" % (scene_no, log['location']), "w")
     
     # Header.
     output_file.write('<?xml version="1.0" encoding="UTF-8" standalone="no" ?>')
@@ -65,12 +65,10 @@ def export_scene(nusc, scene_no):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        dataroot = sys.argv[1]
-    else:
-        dataroot = os.path.expanduser('~/data/nuscenes')
+    dataroot = sys.argv[1] if len(sys.argv) > 1 else os.path.expanduser('~/data/nuscenes')
+    version = sys.argv[2] if len(sys.argv) > 2 else 'v1.0-mini'
 
-    nusc = NuScenes(version='v1.0-mini', dataroot=dataroot, verbose=True)
+    nusc = NuScenes(version=version, dataroot=dataroot, verbose=True)
 
     # Loop through and export each scene.
     for scene_no in range(len(nusc.scene)):

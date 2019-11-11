@@ -18,13 +18,13 @@ python nuscenes_map_to_osm_exporter.py ~/data/nuscenes
 Converting NuScenes annotations to the OpenStreetMap format.
 The tool will create a .osm file in the current directory for each scene.
 ```
-python nuscenes_to_osm_exporter.py ~/data/nuscenes
+python nuscenes_to_osm_exporter.py ~/data/nuscenes v1.0-trainval
 ```
 
 Converting NuScenes annotations to GPX format.
 The tool will create a .gpx file in the current directory for each scene. The script above is more useful than this one because it exports all the metadata associated with the annotations rather this one only export the tracks themselves.
 ```
-python nuscenes_to_gpx_exporter.py ~/data/nuscenes
+python nuscenes_to_gpx_exporter.py ~/data/nuscenes v1.0-trainval
 ```
 
 ## Visualising the data

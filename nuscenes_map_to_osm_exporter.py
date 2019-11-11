@@ -137,10 +137,7 @@ def export_map(dataroot, map_name):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        dataroot = sys.argv[1]
-    else:
-        dataroot = os.path.expanduser('~/data/nuscenes')
+    dataroot = sys.argv[1] if len(sys.argv) > 1 else os.path.expanduser('~/data/nuscenes')
 
     # Loop through and export each map.
     for map_name in map_locations.keys():
